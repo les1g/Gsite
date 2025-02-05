@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Home</a>  <!-- Home page -->
+        <a href="/about" class="{{ 'active' if request.path == '/about' else '' }}">About Me</a>  <!-- About Me page -->
+        <a href="/portfolio" class="{{ 'active' if request.path == '/portfolio' else '' }}">Portfolio</a>
+        <a href="/resume" class="{{ 'active' if request.path == '/resume' else '' }}">Resume</a>
+        <a href="/contact" class="{{ 'active' if request.path == '/contact' else '' }}">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2025 Gisel Garrido</p>
+    </footer>
+</body>
+</html>
