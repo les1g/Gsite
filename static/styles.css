@@ -1,15 +1,44 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
+/* Dark background for the navbar */
+nav {
+    background-color: #0a0a0a;  /* Deep black background */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
 }
 
-h1 {
-    color: #333;
-}
-
+/* Navigation links */
 nav a {
     text-decoration: none;
-    color: #007BFF;
+    color: #d1c4e9;  /* Light indigo for regular links */
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s;  /* Smooth transition effect */
+}
+
+/* Hover effect for links */
+nav a:hover {
+    color: #ffffff;  /* White text on hover */
+    background-color: #4B0082;  /* Lighter indigo on hover */
+}
+
+/* Active link - highlight the current page */
+nav a.active {
+    color: #ffffff;
+    background-color: #6A5ACD;  /* Bright indigo for active page */
+    box-shadow: 0px 0px 10px #6A5ACD; /* Soft glowing effect */
+}
+
+/* Add some space between navigation links */
+nav a:not(:last-child) {
+    margin-right: 15px;
+}
+
+body {
+    background-color: #1a1a1a;  /* Dark charcoal background */
+    color: #f0f0f0;  /* Light text for contrast */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
