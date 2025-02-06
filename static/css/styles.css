@@ -113,6 +113,7 @@ footer {
     .hamburger-menu {
         display: block; /* Make the button visible */
         font-size: 28px; /* Increase font size for easy clicking */
+        color: #d1c4e9; /* Change the color of the menu */
         background: none; /* Remove default background */
         border: none; /* Remove border */
         cursor: pointer; /* Pointer cursor on hover */
