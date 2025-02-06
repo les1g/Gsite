@@ -109,6 +109,12 @@ footer {
     main {
         padding: 20px 40px; /* Minimized padding */
     }
+
+    /* --- Adds margin between navigation links --- */
+    nav a {
+    margin-right: 20px;
+    }
+
     /* --- Hamburger Button Styling --- */
     .hamburger-menu {
         display: block; /* Make the button visible */
