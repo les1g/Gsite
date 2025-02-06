@@ -79,56 +79,6 @@ footer {
 }
 
 /* Media Queries for responsiveness */
-/* Large Screens (desktops) */
-@media (min-width: 1950px) {
-    main {
-        padding: 20px 40px; /* Adds more padding for extra-large screens */
-        max-width: 1950px; /* Allows the content to expand up to 1800px */
-    }
-}
-
-@media (min-width: 1500px) {
-    main {
-        padding: 20px 40px; /* Adds more padding for very large screens */
-        max-width: 1500px; /* Increases max width for screens larger than 1280px */
-    }
-}
-
-@media (min-width: 1200px) {
-    main {
-        padding: 20px 40px; /* Adds more padding for larger screens */
-        max-width: 1200px; /* Limits content width for screens 1200px and above */
-    }
-}
-
-/* Medium Screens (laptops & tablets) */
-@media (max-width: 1199px) {
-    /* Adjust font sizes, padding */
-    nav {
-        flex-direction: column;  /* Stack the navigation items vertically */
-        align-items: flex-start;  /* Align to the left */
-    }
-
-    .nav-links {
-        width: 100%;  /* Make the nav links take full width */
-        display: flex;
-        flex-direction: column;  /* Stack nav items vertically */
-        gap: 10px;
-    }
-
-    nav a {
-        width: 100%;  /* Make each link take full width */
-        padding: 10px 0;  /* Adjust padding for stacked view */
-    }
-
-    header {
-        flex-direction: column;  /* Stack header items vertically */
-        align-items: flex-start;
-    }
-
-    .cute-polar-bear {
-        margin-left: 0;
-        margin-top: 10px; /* Give space between image and links */
     }
 }
 
