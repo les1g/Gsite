@@ -79,70 +79,27 @@ footer {
 }
 
 /* Media Queries for responsiveness */
-@media (min-width: 1280px) {
-    main { /* Main content styling for screens 1280xp and larger */
+/* Large screens (desktops & laptops) */
+@media (min-width: 1280px) { /* Styling for screens 1280xp and larger */
+    /* Main content styling */
+    main {
         padding: 20px 40px;
-        min-width: 1280px;
     }
 }
 
-/* Small screens (tablets & large phones) */
-@media (max-width: 899px) {
-    /* Reduce margins, make images smaller */
-    nav a {
-        font-size: 14px;  /* Decrease font size further for smaller screens */
-    }
-
-    .cute-polar-bear {
-        width: 100px; /* Smaller image on smaller screens */
-    }
-
+/* Medium screens (tablets & large phones) */
+@media (min-width: 975px) { /* Styling for screens 975xp - 1279xp */
+    /* Main content styling */
     main {
-        padding: 200px 30px; /* Further reduce padding on small screens */
-    }
-
-    footer {
-        padding: 10px 20px; /* Smaller footer padding on small screens */
+        padding: 20px 40px;
     }
 }
 
-/* Extra small screens (phones) */
-@media (max-width: 599px) {
-    /* Enable hamburger menu, stack elements */
-    header {
-        padding: 10px 15px; /* Reduce header padding for tiny screens */
-    }
-
-    nav {
-        flex-direction: column;  /* Stack items vertically */
-        align-items: center;  /* Center align links */
-        height: auto;  /* Allow height to adjust */
-    }
-
-    .cute-polar-bear {
-        width: 80px; /* Even smaller image */
-        margin-bottom: 10px;  /* Give space between image and content */
-    }
-
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;  /* Smaller gap for very small screens */
-        align-items: center;  /* Center the nav links */
-    }
-
-    nav a {
-        font-size: 12px;  /* Further decrease font size */
-        padding: 8px 0;  /* Adjust padding for better fitting */
-        width: 100%;
-    }
-
+/* Small screens (phones) */
+@media (max-width: 974px) { /* Styling for screens 974xp and smaller */
+    /* Main content styling */
     main {
-        padding: 10px 20px; /* Minimized padding */
-    }
-
-    footer {
-        padding: 5px 15px;  /* Smaller footer padding for tiny screens */
+        padding: 20px 40px; /* Minimized padding */
     }
 }
 
