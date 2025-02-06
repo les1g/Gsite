@@ -16,6 +16,11 @@
     <!-- Header Section -->
     <header>
         <nav>
+            <!-- Hamburger Menu Button (Visible on Small Screens) -->
+            <button class="hamburger-menu" aria-label="Toggle Navigation">
+            ☰ <!-- Unicode character for a hamburger menu -->
+            </button>
+
             <!-- Navigation Links -->
             <div class="nav-links">
                 <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Home</a>
