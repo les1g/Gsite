@@ -79,6 +79,10 @@ footer {
 }
 
 /* Media Queries for responsiveness */
+@media (min-width: 1280px) {
+    main { /* Main content styling for screens 1280xp and larger */
+        padding: 20px 40px;
+        min-width: 1280px;
     }
 }
 
