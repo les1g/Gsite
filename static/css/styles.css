@@ -109,5 +109,45 @@ footer {
     main {
         padding: 20px 40px; /* Minimized padding */
     }
+/* --- Hamburger Button Styling --- */
+.hamburger-menu {
+    display: block; /* Make the button visible */
+    font-size: 28px; /* Increase font size for easy clicking */
+    background: none; /* Remove default background */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: absolute; /* Position the button absolutely */
+    top: 15px; /* Adjust position from the top */
+    right: 20px; /* Adjust position from the right */
+    z-index: 1000; /* Ensure the button appears above other elements */
+}
+
+/* --- Navigation Links (Hidden by Default) --- */
+.nav-links {
+    display: none; /* Hide the navigation links by default */
+    flex-direction: column; /* Stack the links vertically */
+    background-color: black; /* Background color of the menu */
+    position: absolute; /* Position it absolutely within the viewport */
+    top: 60px; /* Adjust based on the header height */
+    right: 20px; /* Position it to the right */
+    width: 200px; /* Set the width of the menu */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 5px; /* Round the corners of the menu */
+}
+
+/* --- Styling for the Links Inside the Menu --- */
+.nav-links a {
+    display: block; /* Make each link a block element */
+    padding: 10px; /* Add padding inside each link */
+    text-align: center; /* Center the text within each link */
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set text color to white for contrast */
+}
+
+/* --- Show Menu When Toggled --- */
+.show-menu {
+    display: flex !important; /* Show the menu links when toggled */
+}
+
 }
 
