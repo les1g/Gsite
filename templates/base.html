@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata for character encoding and responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
     <title>Gisel Garrido</title>
+
+    <!-- Link to external CSS stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-   <header>
-    <nav>
-        <div class="nav-links">
-            <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Home</a>
-            <a href="/about" class="{{ 'active' if request.path == '/about' else '' }}">About Me</a>
-            <a href="/portfolio" class="{{ 'active' if request.path == '/portfolio' else '' }}">Portfolio</a>
-            <a href="/resume" class="{{ 'active' if request.path == '/resume' else '' }}">Resume</a>
-            <a href="/contact" class="{{ 'active' if request.path == '/contact' else '' }}">Contact</a>
-        </div>
-        <img src="{{ url_for('static', filename='images/cute-polar-bear.svg') }}" alt="cute polar bear" class="cute-polar-bear">
-    </nav>
-</header>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <!-- Navigation Links -->
+            <div class="nav-links">
+                <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Home</a>
+                <a href="/about" class="{{ 'active' if request.path == '/about' else '' }}">About Me</a>
+                <a href="/portfolio" class="{{ 'active' if request.path == '/portfolio' else '' }}">Portfolio</a>
+                <a href="/resume" class="{{ 'active' if request.path == '/resume' else '' }}">Resume</a>
+                <a href="/contact" class="{{ 'active' if request.path == '/contact' else '' }}">Contact</a>
+            </div>
+
+            <!-- Decorative Image (Polar Bear) -->
+            <img src="{{ url_for('static', filename='images/cute-polar-bear.svg') }}" alt="cute polar bear" class="cute-polar-bear">
+        </nav>
+    </header>
+
+    <!-- Main Content Section (to be filled by child templates) -->
     <main>
         {% block content %}{% endblock %}
     </main>
 
+    <!-- Footer Section -->
     <footer>
         <p>© 2025 Gisel Garrido</p>
     </footer>
+
 </body>
 </html>
+
