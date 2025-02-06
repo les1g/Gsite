@@ -80,6 +80,7 @@ footer {
 
 /* Media Queries for responsiveness */
 /* Large Screens (desktops) */
+@media (min-width: 1950px) {
 @media (min-width: 1200px) {
     /* Keep full-width layout */
 }
