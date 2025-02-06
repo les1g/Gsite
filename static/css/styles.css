@@ -97,6 +97,10 @@ footer {
     main {
         padding: 20px 40px;
     }
+
+    .hamburger-menu {
+        display: none; /* Hides the hamburger menu */
+    }
 }
 
 /* Small screens (phones) */
