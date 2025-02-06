@@ -69,14 +69,6 @@ header {
     margin-left: 20px;  /* Adds space to the left of the image */
 }
 
-/* Main content styling */
-main {
-    padding: 20px 650px; /* Adds 20px padding on top/bottom and 650px on left/right */
-    padding-left: 10px; /* Adjusts left padding to 10px */
-    max-width: 1200px; /* Sets max width of content */
-    margin: 0 auto; /* Centers content horizontally */
-}
-
 /* Footer styling */
 footer {
     background-color: #0a0a0a; /* Black footer background */
