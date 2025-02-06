@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gisel Garrido</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
    <header>
@@ -16,7 +16,7 @@
             <a href="/resume" class="{{ 'active' if request.path == '/resume' else '' }}">Resume</a>
             <a href="/contact" class="{{ 'active' if request.path == '/contact' else '' }}">Contact</a>
         </div>
-        <img src="{{ url_for('static', filename='cute-polar-bear.svg') }}" alt="cute polar bear" class="cute-polar-bear">
+        <img src="{{ url_for('static', filename='images/cute-polar-bear.svg') }}" alt="cute polar bear" class="cute-polar-bear">
     </nav>
 </header>
     <main>
