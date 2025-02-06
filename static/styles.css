@@ -1,44 +1,179 @@
-/* Dark background for the navbar */
+/* Navbar styling */
 nav {
-    background-color: #0a0a0a;  /* Deep black background */
-    padding: 10px 20px;
+    background-color: #0a0a0a;
+    padding: 10px 30px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
 }
 
-/* Navigation links */
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
 nav a {
     text-decoration: none;
-    color: #d1c4e9;  /* Light indigo for regular links */
-    padding: 12px 18px;
-    font-size: 16px;
+    color: #d1c4e9;
+    padding: 12px 22px;
+    font-size: 18px;
     font-weight: bold;
     border-radius: 5px;
-    transition: color 0.3s, background-color 0.3s;  /* Smooth transition effect */
+    transition: color 0.3s, background-color 0.3s;
 }
 
-/* Hover effect for links */
 nav a:hover {
-    color: #ffffff;  /* White text on hover */
-    background-color: #4B0082;  /* Lighter indigo on hover */
+    color: #ffffff;
+    background-color: #4B0082;
 }
 
-/* Active link - highlight the current page */
 nav a.active {
     color: #ffffff;
-    background-color: #6A5ACD;  /* Bright indigo for active page */
-    box-shadow: 0px 0px 10px #6A5ACD; /* Soft glowing effect */
+    background-color: #6A5ACD;
+    box-shadow: 0px 0px 10px #6A5ACD;
 }
 
-/* Add some space between navigation links */
 nav a:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 body {
-    background-color: #1a1a1a;  /* Dark charcoal background */
-    color: #f0f0f0;  /* Light text for contrast */
+    background-color: #1a1a1a;
+    color: #f0f0f0;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    height: 60px;
+}
+
+.cute-polar-bear {
+    width: 150px;
+    height: auto;
+    margin-left: 20px;
+}
+
+main {
+    padding: 20px 650px;
+    padding-left: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #0a0a0a;
+    color: #d1c4e9;
+    padding: 10px 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    main {
+        padding: 20px 50px; /* Decrease padding on medium screens */
+    }
+
+    .cute-polar-bear {
+        width: 120px; /* Adjust image size for medium screens */
+    }
+
+    nav a {
+        font-size: 16px; /* Decrease font size on medium screens */
+    }
+}
+
+@media (max-width: 900px) {
+    nav {
+        flex-direction: column;  /* Stack the navigation items vertically */
+        align-items: flex-start;  /* Align to the left */
+    }
+
+    .nav-links {
+        width: 100%;  /* Make the nav links take full width */
+        display: flex;
+        flex-direction: column;  /* Stack nav items vertically */
+        gap: 10px;
+    }
+
+    nav a {
+        width: 100%;  /* Make each link take full width */
+        padding: 10px 0;  /* Adjust padding for stacked view */
+    }
+
+    header {
+        flex-direction: column;  /* Stack header items vertically */
+        align-items: flex-start;
+    }
+
+    .cute-polar-bear {
+        margin-left: 0;
+        margin-top: 10px; /* Give space between image and links */
+    }
+}
+
+/* Small screen (less than 600px) */
+@media (max-width: 600px) {
+    nav a {
+        font-size: 14px;  /* Decrease font size further for smaller screens */
+    }
+
+    .cute-polar-bear {
+        width: 100px; /* Smaller image on smaller screens */
+    }
+
+    main {
+        padding: 20px 30px; /* Further reduce padding on small screens */
+    }
+
+    footer {
+        padding: 10px 20px; /* Smaller footer padding on small screens */
+    }
+}
+
+/* Very small screen (less than 400px) */
+@media (max-width: 400px) {
+    header {
+        padding: 10px 15px; /* Reduce header padding for tiny screens */
+    }
+
+    nav {
+        flex-direction: column;  /* Stack items vertically */
+        align-items: center;  /* Center align links */
+        height: auto;  /* Allow height to adjust */
+    }
+
+    .cute-polar-bear {
+        width: 80px; /* Even smaller image */
+        margin-bottom: 10px;  /* Give space between image and content */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;  /* Smaller gap for very small screens */
+        align-items: center;  /* Center the nav links */
+    }
+
+    nav a {
+        font-size: 12px;  /* Further decrease font size */
+        padding: 8px 0;  /* Adjust padding for better fitting */
+        width: 100%;
+    }
+
+    main {
+        padding: 10px 20px; /* Minimized padding */
+    }
+
+    footer {
+        padding: 5px 15px;  /* Smaller footer padding for tiny screens */
+    }
+}
+
