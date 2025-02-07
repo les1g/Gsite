@@ -103,7 +103,7 @@ footer {
     }
 }
 
-/* Small screens (phones) 974xp and smaller */
+/* Small screens (phones) 974px and smaller */
 @media (max-width: 974px) {
     /* --- Main content styling --- */
     main {
@@ -112,7 +112,7 @@ footer {
 
     /* --- Adds margin between navigation links --- */
     nav a {
-    margin-right: 20px;
+        margin-right: 20px;
     }
 
     /* --- Hamburger Button Styling --- */
@@ -126,7 +126,7 @@ footer {
         position: absolute; /* Position the button absolutely */
         top: 15px; /* Adjust position from the top */
         right: 20px; /* Adjust position from the right */
-        z-index: 1000; /* Ensure the button appears above other elements */
+        z-index: 1001; /* Ensure the button appears above other elements */
     }
 
     /* --- Navigation Links (Hidden by Default) --- */
@@ -140,6 +140,7 @@ footer {
         width: 200px; /* Set the width of the menu */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
         border-radius: 5px; /* Round the corners of the menu */
+        z-index: 1000; /* Ensure the menu stays above images */
     }
 
     /* --- Styling for the Links Inside the Menu --- */

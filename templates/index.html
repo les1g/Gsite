@@ -1,6 +1,47 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Welcome to My Personal Website</h1>
-    <p>Hi, I'm Gisel, a student software engineer. Here you can learn more about me, see my projects, and connect with me.</p>
+    <!-- Introduction -->
+    <section>
+        <div class="hero-text">
+            <h1>Hi, I'm Gisel Garrido</h1>
+            <p>A Software Engineer passionate about web development and innovation.</p>
+            <!-- Call-to-action button leading to portfolio page -->
+            <a href="/portfolio" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="about-preview">
+        <h2>About Me</h2>
+        <p>I love building creative and functional websites, working with Python and Flask, and exploring new technologies.</p>
+        <!-- Button leading to the full 'About Me' page -->
+        <a href="/about" class="btn">Learn More</a>
+    </section>
+
+    <!-- Featured Work Section -->
+    <section class="featured-work">
+        <h2>Featured Projects</h2>
+        <div class="projects">
+            <!-- Individual project previews -->
+            <div class="project">
+                <h3>Project One</h3>
+                <p>A brief description of the project.</p>
+                <a href="/portfolio" class="btn">See More</a>
+            </div>
+            <div class="project">
+                <h3>Project Two</h3>
+                <p>A brief description of the project.</p>
+                <a href="/portfolio" class="btn">See More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Call-to-Action Section -->
+    <section class="contact-cta">
+        <h2>Let's Connect!</h2>
+        <p>Interested in working together? Reach out to me!</p>
+        <!-- Button linking to the contact page -->
+        <a href="/contact" class="btn">Contact Me</a>
+    </section>
 {% endblock %}
