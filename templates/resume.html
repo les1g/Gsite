@@ -1,6 +1,38 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Resume</h1>
-    <p> Place resume information here. </p>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>My Resume</h1>
+    </header>
+
+    <main>
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>I am a passionate Software Engineer with experience in full-stack development, AI, and UX/UI design. Below are highlights of my skills and experience:</p>
+            <ul>
+                <li><strong>Languages:</strong> Java, Python, JavaScript</li>
+                <li><strong>Tools & Frameworks:</strong> Flask, React, HTML, CSS</li>
+                <li><strong>Key Skills:</strong> Full-stack development, UI/UX design, Problem-solving</li>
+                <li><strong>Experience:</strong> 3+ years working with cross-functional teams to build innovative software solutions.</li>
+            </ul>
+        </section>
+
+        <section id="download">
+            <h2>Download My Resume</h2>
+            <p>Click the link below to download my full resume:</p>
+            <a href="static/images/Resume_2025.pdf" target="Resume_2025.pdf">Download Resume (PDF)</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Gisel</p>
+    </footer>
+</body>
 {% endblock %}
