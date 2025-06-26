@@ -1,8 +1,133 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Portfolio</h1>
-    <h3>python_labs</h3>
-    <h3>html_labs</h3>
-    <h3>Gsite</h3>
+
+<div class="portfolio-container">
+    <div class="portfolio-header">
+        <h1>My Projects</h1>
+        <p class="portfolio-subtitle">Explore my latest work in web development and design</p>
+    </div>
+
+    <!-- Featured Live Projects -->
+    <section class="featured-projects">
+        <h2>🌟 Featured Live Projects</h2>
+        <div class="project-grid">
+            <div class="project-card featured">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://les1g.github.io/minnies-portfolio/" target="_blank" class="btn-primary">
+                                🚀 View Live
+                            </a>
+                            <a href="https://github.com/les1g/minnies-portfolio" target="_blank" class="btn-secondary">
+                                📁 View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Minnie's Portfolio</h3>
+                    <p>A beautifully crafted portfolio website showcasing modern web design principles and responsive layout. Built with HTML5, CSS3, and JavaScript.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card featured">
+                <div class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://les1g.github.io/welcomeToArizona/" target="_blank" class="btn-primary">
+                                🚀 View Live
+                            </a>
+                            <a href="https://github.com/les1g/welcomeToArizona" target="_blank" class="btn-secondary">
+                                📁 View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Welcome to Arizona</h3>
+                    <p>An interactive travel guide showcasing the beauty of Arizona with engaging visuals and smooth user experience. Features modern web technologies and animations.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Animations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Projects -->
+    <section class="other-projects">
+        <h2>💻 Development Projects</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <div class="project-info">
+                    <h3>Personal Portfolio Website (This Site)</h3>
+                    <p>A full-stack portfolio website built with Flask, featuring dynamic content, responsive design, and modern UI/UX principles. Includes contact functionality and project showcases.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="project-status">
+                    <span class="status-badge active">Live</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h3>Python Labs Collection</h3>
+                    <p>A comprehensive collection of documented Python programming exercises and experiments. Demonstrates proficiency in Python fundamentals, data structures, and algorithms.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Documentation</span>
+                        <span class="tech-tag">Algorithms</span>
+                    </div>
+                    <a href="https://github.com/les1g/python_labs" target="_blank" class="project-link">
+                        📂 View on GitHub
+                    </a>
+                </div>
+                <div class="project-status">
+                    <span class="status-badge complete">Complete</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-info">
+                    <h3>HTML/CSS Labs</h3>
+                    <p>A collection of front-end development exercises and experiments focusing on modern HTML5 and CSS3 techniques, responsive design patterns, and best practices.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Responsive Design</span>
+                    </div>
+                </div>
+                <div class="project-status">
+                    <span class="status-badge in-progress">In Progress</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="portfolio-cta">
+        <h2>Want to see more?</h2>
+        <p>Check out my GitHub for additional projects and contributions</p>
+        <a href="https://github.com/les1g" target="_blank" class="btn-github">
+            🐙 Visit My GitHub
+        </a>
+    </section>
+</div>
+
 {% endblock %}

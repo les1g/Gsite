@@ -2,30 +2,104 @@
 
 {% block content %}
 
-<!--Hi, I'm Gisel Section-->
-<section>
-    <div class="hero-text">
-        <h1>Hi, I’m Gisel!</h1>
-        <p>A Software Engineer and Developer with a deep interest in AI, front-end and back-end development, and UX/UI design.</p>
-        <!-- Call-to-action button leading to portfolio page -->
-        <a href="/portfolio" class="btn">View My Work</a>
-    </div>
-</section>
+<div class="home-container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="greeting">Hello, I'm</span>
+                <h1 class="hero-title">Gisel Garrido</h1>
+                <h2 class="hero-subtitle">Software Engineer & Web Developer</h2>
+                <p class="hero-description">
+                    Passionate about creating beautiful, functional web experiences with a focus on 
+                    <span class="highlight">front-end development</span>, <span class="highlight">UI/UX design</span>, 
+                    and emerging technologies like <span class="highlight">AI</span>.
+                </p>
+                <div class="hero-buttons">
+                    <a href="/portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="/contact" class="btn btn-secondary">Let's Connect</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-snippet">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="code-content">
+                        <div class="code-line"><span class="keyword">def</span> <span class="function">create_awesome_websites</span>():</div>
+                        <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"Beautiful & Functional"</span></div>
+                        <div class="code-line"></div>
+                        <div class="code-line"><span class="comment"># Always learning, always building</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!--About me Section-->
-<section class="about-preview">
-    <h2>About Me</h2>
-    <p>I love all things tech, with a focus on software and new technologies. My current tools include Java, Python, Flask, CSS, and HTML. </p>
-    <!-- Button leading to the full 'About Me' page -->
-    <a href="/about" class="btn">Learn More</a>
-</section>
+    <!-- Featured Projects Preview -->
+    <section class="featured-preview">
+        <h2>Featured Projects</h2>
+        <div class="preview-grid">
+            <div class="preview-card">
+                <div class="preview-icon">🎨</div>
+                <h3>Minnie's Portfolio</h3>
+                <p>Modern portfolio design with responsive layouts</p>
+                <a href="https://les1g.github.io/minnies-portfolio/" target="_blank" class="preview-link">View Live →</a>
+            </div>
+            <div class="preview-card">
+                <div class="preview-icon">🌵</div>
+                <h3>Welcome to Arizona</h3>
+                <p>Interactive travel guide with engaging animations</p>
+                <a href="https://les1g.github.io/welcomeToArizona/" target="_blank" class="preview-link">View Live →</a>
+            </div>
+            <div class="preview-card">
+                <div class="preview-icon">🚀</div>
+                <h3>More Projects</h3>
+                <p>Explore my complete portfolio and GitHub repositories</p>
+                <a href="/portfolio" class="preview-link">See All →</a>
+            </div>
+        </div>
+    </section>
 
-<!--connect Section-->
-<section class="contact-cta">
-    <h2>Let's Connect!</h2>
-    <p>Interested in collaborating? Feel free to reach out!</p>
-    <!-- Button linking to the contact page -->
-    <a href="/contact" class="btn">Contact Me</a>
-</section>
+    <!-- About Preview Section -->
+    <section class="about-preview">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>
+                I'm a Software Engineering student at WGU with a passion for web development and design. 
+                My journey in tech combines creativity with functionality, focusing on user-centered solutions 
+                that make a difference.
+            </p>
+            <div class="skills-preview">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">UI/UX</span>
+            </div>
+            <a href="/about" class="btn btn-outline">Learn More About Me</a>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section class="connect-section">
+        <h2>Let's Build Something Together</h2>
+        <p>Interested in collaborating on a project or just want to chat about tech? I'd love to hear from you!</p>
+        <div class="connect-buttons">
+            <a href="/contact" class="btn btn-primary">Get In Touch</a>
+            <a href="https://github.com/les1g" target="_blank" class="btn btn-github">
+                <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/gisel-garrido/" target="_blank" class="btn btn-linkedin">
+                <span>LinkedIn</span>
+            </a>
+        </div>
+    </section>
+</div>
 
 {% endblock %}

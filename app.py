@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from flask_mail import Mail, Message
+import os
 
 app = Flask(__name__)
 
@@ -7,9 +8,9 @@ app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'untitledgisel@gmail.com'  # Use your email
-app.config['MAIL_PASSWORD'] = 'Gisel123'  # Use your email password (use app password if 2FA is enabled)
-app.config['MAIL_DEFAULT_SENDER'] = 'your-email@gmail.com'
+app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME', 'your-email@gmail.com')
+app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD', 'your-app-password')
+app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_USERNAME', 'your-email@gmail.com')
 
 mail = Mail(app)
 
@@ -29,18 +30,8 @@ def portfolio():
 def resume():
     return render_template('resume.html')  # Resume page
 
-@app.route('/contact', methods=['GET', 'POST'])
+@app.route('/contact')
 def contact():
-    if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        message = request.form['message']
-
-        msg = Message('Contact Form Submission',
-                      recipients=['untitledgisel@gmail.com'])  # Replace with your email
-        msg.body = f"Name: {name}\nEmail: {email}\nMessage: {message}"
-        mail.send(msg)
-        return 'Message sent successfully!'
     return render_template('contact.html')  # Contact page
 
 if __name__ == '__main__':

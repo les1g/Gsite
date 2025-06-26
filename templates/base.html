@@ -24,7 +24,7 @@
             <div class="nav-links">
                 <a href="/" class="{{ 'active' if request.path == '/' else '' }}">Home</a>
                 <a href="/about" class="{{ 'active' if request.path == '/about' else '' }}">About Me</a>
-                <a href="/portfolio" class="{{ 'active' if request.path == '/portfolio' else '' }}">Portfolio</a>
+                <a href="/portfolio" class="{{ 'active' if request.path == '/portfolio' else '' }}">Projects</a>
                 <a href="/resume" class="{{ 'active' if request.path == '/resume' else '' }}">Resume</a>
                 <a href="/contact" class="{{ 'active' if request.path == '/contact' else '' }}">Contact</a>
             </div>
@@ -46,7 +46,7 @@
         <a href="https://github.com/les1g" target="_blank">GitHub</a> |
         <a href="https://www.linkedin.com/in/gisel-garrido/" target="_blank">LinkedIn</a>
     </p>
-</footer>
+    </footer>
 
     <!-- Link to external JS menu -->
     <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
