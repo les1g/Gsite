@@ -1,4 +1,7 @@
-from flask import Flask, render_template, request
+from dotenv import load_dotenv
+load_dotenv() # Load environment variables from .env file
+
+from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_mail import Mail, Message
 import os
 
@@ -8,9 +11,10 @@ app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME', 'your-email@gmail.com')
-app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD', 'your-app-password')
-app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_USERNAME', 'your-email@gmail.com')
+app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_USERNAME')
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 mail = Mail(app)
 
@@ -30,8 +34,33 @@ def portfolio():
 def resume():
     return render_template('resume.html')  # Resume page
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
+    if request.method == 'POST':
+        # Get form data
+        name = request.form.get('first') # Changed from first_name
+        email = request.form.get('email')
+        message_body = request.form.get('message')
+
+        # Simple validation
+        if not all([name, email, message_body]): # Removed last_name
+            flash('All form fields are required.', 'danger')
+            return redirect(url_for('contact'))
+
+        # Create and send email
+        try:
+            msg = Message(f"New message from {name}", # Changed from first_name last_name
+                          recipients=[app.config['MAIL_USERNAME']])
+            msg.body = f"From: {email}\n\n{message_body}"
+            mail.send(msg)
+            flash('Your message has been sent successfully!', 'success')
+        except Exception as e:
+            # Log the error for debugging
+            print(e)
+            flash('Sorry, there was an error sending your message. Please try again later.', 'danger')
+
+        return redirect(url_for('contact'))
+        
     return render_template('contact.html')  # Contact page
 
 if __name__ == '__main__':
