@@ -2,33 +2,28 @@
 
 {% block content %}
 
-<!--Heading -->
-<h1>Resume</h1>
+    <!-- About Section -->
+    <section class="resume-section about-section" data-aos="fade-right">
+        <h2>What I Bring</h2>
+        <div class="about-content">
+            <p>5+ years balancing empathy with efficiency in customer service, compliance, and technical support. Currently channeling that experience into software development - turns out solving user problems and debugging code aren't that different.</p>
+            <p>I love creating functional designs and figuring out how things work behind the scenes. Always learning, always building.</p>
+        </div>
+    </section>
 
-<!--Resume Overview Section-->
-<section id="overview">
-    <h2>Overview</h2>
-    <p>
-        I am passionate about Software Engineer my experience is in
-        front-end development and UI/UX design but I have deep interest
-        in AI.
-    </p>
-
-    <!--Skills-->
-    <h2>Skills</h2>
-    <ul>
-        <li><strong>Languages:</strong> Java, Python, JavaScript</li>
-        <li><strong>Tools & Frameworks:</strong> Flask, React, HTML, CSS</li>
-        <li><strong>Key Skills:</strong> Front-end development, UI/UX design, Problem-solving</li>
-        <li><strong>Experience:</strong> 3+ years working with cross-functional teams to build innovative software solutions.</li>
-    </ul>
-</section>
-
-<!--Download Resume Section-->
-<section id="download">
-    <h2>Download My Resume</h2>
-    <p>Click the link below to download my full resume:</p>
-    <a href="static/images/Resume_2025.pdf" target="Resume_2025.pdf">Download Resume (PDF)</a>
-</section>
+    <!-- Download Section -->
+    <section class="resume-download">
+        <h2>Download Resume</h2>
+        <p>Want a PDF copy? Download my full resume below:</p>
+        <a href="{{ url_for('static', filename='images/Resume_2025.pdf') }}" target="_blank" class="btn btn-primary download-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Download PDF
+        </a>
+    </section>
+</div>
 
 {% endblock %}

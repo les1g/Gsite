@@ -1,19 +1,171 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %}
 
-{% block content %}
+<div class="contact-container">
+  <!-- Flash Messages -->
+  {% with messages = get_flashed_messages(with_categories=true) %} {% if
+  messages %}
+  <div class="flash-messages">
+    {% for category, message in messages %}
+    <div class="flash {{ category }}">{{ message }}</div>
+    {% endfor %}
+  </div>
+  {% endif %} {% endwith %}
 
-<!-- Contact Page Header -->
-<section id="contact-header">
-    <h1>Contact Me</h1>
-    <p>Have a question or want to collaborate? Feel free to reach out! 😊</p>
-</section>
+  <!-- Contact Header -->
+  <section class="contact-header">
+    <h1>Let's Chat</h1>
+  </section>
+  <!-- Contact Form -->
+  <section id="contact-form">
+    <form action="{{ url_for('contact') }}" method="POST">
+      <fieldset>
+        <legend>Contact Form</legend>
 
-<!-- Alternative Contact Methods -->
-<section id="contact-info">
-    <p>📞Call Me: <a href="tel:+1234567890">+1 (602) 907-1852</a></p>
-    <p>📧 Email: <a href="mailto:gisel3garrido@yahoo.com">gisel3garrido@yahoo.com</a></p>
-    <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/gisel-garrido/" target="_blank">linkedin.com/in/gisel-garrido</a></p>
-    <p>📁 GitHub: <a href="https://github.com/les1g" target="_blank">github.com/les1g</a></p>
-</section>
+        <div>
+          <label for="first">Name</label>
+          <input type="text" id="first" name="first" required />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+      </fieldset>
+
+      <input type="submit" value="Send Message" />
+    </form>
+  </section>
+  <!-- Contact Methods -->
+  <section class="contact-methods">
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <polyline
+              points="22,6 12,13 2,6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <h3>Email</h3>
+        <p>
+          <a href="mailto:gisel3garrido@yahoo.com">gisel3garrido@yahoo.com</a>
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22.46 6C21.69 6.35 20.86 6.58 20 6.69C20.88 6.16 21.56 5.32 21.88 4.31C21.05 4.81 20.13 5.16 19.16 5.36C18.37 4.5 17.26 4 16 4C13.65 4 11.73 5.92 11.73 8.29C11.73 8.63 11.77 8.96 11.84 9.27C8.28 9.09 5.11 7.38 3 4.79C2.63 5.42 2.42 6.16 2.42 6.94C2.42 8.43 3.17 9.75 4.33 10.5C3.62 10.5 2.96 10.3 2.38 10V10.03C2.38 12.11 3.86 13.85 5.82 14.24C5.46 14.34 5.08 14.39 4.69 14.39C4.42 14.39 4.15 14.36 3.89 14.31C4.43 16 6 17.26 7.89 17.29C6.43 18.45 4.58 19.13 2.56 19.13C2.22 19.13 1.88 19.11 1.54 19.07C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79C20.33 8.6 20.33 8.42 20.32 8.23C21.16 7.63 21.88 6.87 22.46 6Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+        <h3>LinkedIn</h3>
+        <p>
+          <a href="https://www.linkedin.com/in/gisel-garrido/" target="_blank"
+            >linkedin.com/in/gisel-garrido</a
+          >
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 19C4.02944 19 0 14.9706 0 10C0 5.02944 4.02944 1 9 1C13.9706 1 18 5.02944 18 10C18 14.9706 13.9706 19 9 19ZM9 17C12.866 17 16 13.866 16 10C16 6.13401 12.866 3 9 3C5.13401 3 2 6.13401 2 10C2 13.866 5.13401 17 9 17ZM9 11.93C10.07 11.93 10.93 11.07 10.93 10C10.93 8.93 10.07 8.07 9 8.07C7.93 8.07 7.07 8.93 7.07 10C7.07 11.07 7.93 11.93 9 11.93Z"
+              fill="currentColor"
+            />
+            <path d="M20 8V21L18 19.5L16 21V8H20Z" fill="currentColor" />
+          </svg>
+        </div>
+        <h3>GitHub</h3>
+        <p>
+          <a href="https://github.com/les1g" target="_blank"
+            >github.com/les1g</a
+          >
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.59544 1.99532 8.06638 2.16718 8.43384 2.48363C8.80131 2.80008 9.04329 3.23954 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.8939 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5865 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <h3>Phone</h3>
+        <p><a href="tel:+16029071852">(602) 907-1852</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Message Section -->
+  <section class="quick-message">
+    <h2>Shoot Me a Message</h2>
+    <p>
+      Want to reach out directly? Pick your favorite way to get in touch and
+      I'll get back to you soon.
+    </p>
+    <div class="message-buttons">
+      <a
+        href="mailto:gisel3garrido@yahoo.com?subject=Hey!"
+        class="btn btn-primary"
+        >Send Email</a
+      >
+      <a
+        href="https://www.linkedin.com/in/gisel-garrido/"
+        target="_blank"
+        class="btn btn-secondary"
+        >Message on LinkedIn</a
+      >
+    </div>
+  </section>
+</div>
 
 {% endblock %}
